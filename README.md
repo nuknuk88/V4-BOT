@@ -28,6 +28,8 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 
 ### Change Log/Updates
 ---------------------------------
+- **v1.05.1**
+  - Accidentally put the HP selector for MP pots as well. Fixed.  
 - **v1.05**
   - Added HP potion selector. Can choose Purple, Blue, or Green HP pot. 
 - **v1.04**
