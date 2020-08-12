@@ -33,9 +33,12 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 - **v1.04**
   - Added bundle unlock potential when bag full to prevent teleport loop when no space for pot. 
 - **v1.03**
-  - Fixed incorrect no pot triggers. Added redeployment of hunting and gathering companions. Conquest companions will just be confirmed and closed. 
+  - Fixed incorrect no pot triggers. 
+  - Added redeployment of hunting and gathering companions. 
+  - Conquest companions will just be confirmed and closed. 
+  - Changed writing events to notepad to logging directly to file. 
 - **v1.02**
-  - Added event logging feature. 
+  - Added event logging to a blank notepad. 
 - **v1.01**
   - Added auto rez and removal of death fatigue if applicable. 
 - **v1.00**
