@@ -1,4 +1,4 @@
-# V4 Ruinous Volcano Grind Bot
+# V4 Ruinous Volcano Grind Bot | BETA/WIP
 
 ### Features
 - Farm one of the three 112k CP zones in Lunatra Ruinous Volcano
