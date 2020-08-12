@@ -1,0 +1,22 @@
+----- V4 Ruinous Volcano Grind Bot - v1.03 Event Log -----
+
+Mon Aug 10 23:19:08 2020: Initiating zone selection
+Mon Aug 10 23:20:04 2020: Ruinous Crater selected
+Mon Aug 10 23:20:04 2020: Going to Evelyn1 - Ruinous Volcano
+Mon Aug 10 23:20:19 2020: Inside Ruinous Volcano
+Mon Aug 10 23:20:24 2020: Porting to closest camp: Crater Border Post
+Mon Aug 10 23:20:43 2020: Running to Ruinous Crater
+Mon Aug 10 23:59:37 2020: Companion detected
+Mon Aug 10 23:59:43 2020: Gathering Companion dispatched again
+Mon Aug 10 23:59:43 2020: Companion detected
+Mon Aug 10 23:59:49 2020: Gathering Companion dispatched again
+Tue Aug 11 00:04:11 2020: Companion detected
+Tue Aug 11 00:04:20 2020: Hunting Companion dispatched again
+Tue Aug 11 00:07:55 2020: Companion detected
+Tue Aug 11 00:08:01 2020: Gathering Companion dispatched again
+Tue Aug 11 00:16:43 2020: No MP pots detected, ported to camp to buy x500
+Tue Aug 11 00:16:56 2020: Going back to grind
+Tue Aug 11 00:17:07 2020: Running to Ruinous Crater
+Tue Aug 11 01:08:00 2020: Companion detected
+Tue Aug 11 01:08:06 2020: Gathering Companion dispatched again
+Tue Aug 11 01:26:54 2020: DEATH DETECTED!!! Revived at camp
