@@ -28,9 +28,15 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 
 ### Change Log/Updates
 ---------------------------------
-- v1.05 - Added HP potion selector. Can choose Purple, Blue, or Green HP pot. 
-- v1.04 - Added bundle unlock potential when bag full to prevent teleport loop when no space for pot. 
-- v1.03 - Fixed incorrect no pot triggers. Added redeployment of hunting and gathering companions. Conquest companions will just be confirmed and closed. 
-- v1.02 - Added event logging feature. 
-- v1.01 - Added auto rez and removal of death fatigue if applicable. 
-- v1.00 - Inital release with no pot detection and resupplying with x500 HP or MP pots and resume farming. 
+- v1.05
+  - Added HP potion selector. Can choose Purple, Blue, or Green HP pot. 
+- v1.04
+  - Added bundle unlock potential when bag full to prevent teleport loop when no space for pot. 
+- v1.03
+  - Fixed incorrect no pot triggers. Added redeployment of hunting and gathering companions. Conquest companions will just be confirmed and closed. 
+- v1.02
+  - Added event logging feature. 
+- v1.01
+  - Added auto rez and removal of death fatigue if applicable. 
+- v1.00
+  - Inital release with no pot detection and resupplying with x500 HP or MP pots and resume farming. 
