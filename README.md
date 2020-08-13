@@ -28,6 +28,10 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 
 ### Change Log/Updates
 ---------------------------------
+- **v1.05.3**
+  - Updated script with functions and fixed pot again.
+- **v1.05.2**
+  - Fixed issue with HP pot purchase menu closing.
 - **v1.05.1**
   - Accidentally put the HP selector for MP pots as well. Fixed.  
 - **v1.05**
