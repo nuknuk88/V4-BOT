@@ -29,6 +29,8 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 ### Change Log/Updates
 ---------------------------------
 - **v1.05.3**
+  - Max bag logic was incorrect. Fixed. 
+- **v1.05.3**
   - Updated script with functions and fixed pot again.
 - **v1.05.2**
   - Fixed issue with HP pot purchase menu closing.
