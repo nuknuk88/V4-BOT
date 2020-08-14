@@ -28,7 +28,7 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 
 ### Change Log/Updates
 ---------------------------------
-- **v1.05.3**
+- **v1.05.4**
   - Max bag logic was incorrect. Fixed. 
 - **v1.05.3**
   - Updated script with functions and fixed pot again.
