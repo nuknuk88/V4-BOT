@@ -1,0 +1,247 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>v4.sikuli</h2> <a href="v4.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+Settings.MoveMouseDelay = <span class="dig">1</span>
+running = True
+<span class="kw">def</span> runHotkey(event):
+    <span class="kw">global</span> running
+    running = False
+Env.addHotkey(Key.F1, KeyModifier.CTRL, runHotkey)
+
+<span class="kw">def</span> myExists(reg, similar, *images):
+    <span class="kw">for</span> img <span class="kw">in</span> images:
+        <span class="kw">if</span> reg.exists(Pattern(img).similar(similar), <span class="dig">0</span>):
+            <span class="kw">return</span> True;
+    <span class="kw">return</span> False;
+
+<span class="cmt">#Change to 1920 resolution if need be</span>
+<span class="kw">if</span> exists(<img src="1596926358787.png" />):
+    <span class="skw">click</span>(<img src="1596926403575.png" />)
+    <span class="skw">click</span>(<img src="1596926416403.png" />)
+    <span class="skw">click</span>(<img src="1596926439996.png" />)
+    <span class="skw">click</span>(<img src="1596926466817.png" />)
+    <span class="skw">click</span>(<img src="1596926584588.png" />)
+
+<span class="cmt">#get zone</span>
+<span class="skw">popup</span>(<span class="str">"This macro will replenish your HP or MP pots while farming in Ruinous Volcano by x500 when you run out\nMake sure you are in Dimensional Boundary and have some Camp Teleport Scrolls\nPress CTRL+F1 to stop the macro\nAnd don't for get to pop your exp pots. Happy farmin :)"</span>, <span class="str">"V4 Ruinous Volcano Auto Pot"</span>)
+zones = (<span class="str">'Ruinous Branch Road'</span>,<span class="str">'Ruinous Crater'</span>,<span class="str">'Ruinous Ancient Rubble'</span>)
+zoneresult = select(<span class="str">'Pick a 112k zone to farm'</span>, <span class="str">'V4 Ruinous Volcano Auto Pot'</span>, options = zones)
+
+
+<span class="cmt">#get into Ruinous Volcano</span>
+<span class="skw">click</span>(Location(<span class="dig">1702</span>, <span class="dig">118</span>))
+<span class="skw">click</span>(Location(<span class="dig">1456</span>, <span class="dig">229</span>))
+<span class="skw">click</span>(Location(<span class="dig">1867</span>, <span class="dig">230</span>))
+<span class="skw">wait</span>(<img src="1596932579715.png" />,<span class="dig">30</span>)
+<span class="skw">click</span>(Location(<span class="dig">374</span>, <span class="dig">664</span>))
+<span class="skw">click</span>(Location(<span class="dig">1659</span>, <span class="dig">1028</span>))
+<span class="skw">click</span>(Location(<span class="dig">959</span>, <span class="dig">715</span>))
+<span class="skw">sleep</span>(<span class="dig">5</span>)
+<span class="cmt">#inside ruinous, teleport to closest base</span>
+<span class="skw">click</span>(Location(<span class="dig">173</span>, <span class="dig">227</span>))
+<span class="skw">click</span>(Location(<span class="dig">535</span>, <span class="dig">122</span>))
+<span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">245</span>), Location(<span class="dig">1655</span>, <span class="dig">980</span>))
+<span class="skw">sleep</span>(<span class="dig">3</span>)
+<span class="kw">if</span> zoneresult == <span class="str">'Ruinous Branch Road'</span>:
+    <span class="skw">click</span>(<img src="1596932150617.png" />)
+    <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+    <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+    <span class="skw">sleep</span>(<span class="dig">5</span>)
+<span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Crater'</span>:
+    <span class="skw">click</span>(<img src="1596932300046.png" />)
+    <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+    <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+    <span class="skw">sleep</span>(<span class="dig">5</span>)
+<span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Ancient Rubble'</span>:
+    <span class="skw">click</span>(<img src="1596932327063.png" />)
+    <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+    <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+    <span class="skw">sleep</span>(<span class="dig">5</span>)
+<span class="skw">click</span>(Location(<span class="dig">171</span>, <span class="dig">228</span>))
+<span class="skw">click</span>(Location(<span class="dig">1882</span>, <span class="dig">110</span>))
+<span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">980</span>), Location(<span class="dig">1655</span>, <span class="dig">245</span>))
+<span class="kw">if</span> zoneresult == <span class="str">'Ruinous Branch Road'</span>:
+    <span class="skw">click</span>(<img src="1596928784758.png" />)
+<span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Crater'</span>:
+    <span class="skw">click</span>(<img src="1596928756349.png" />)
+<span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Ancient Rubble'</span>:
+    <span class="skw">click</span>(<img src="1596928815049.png" />)
+<span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">980</span>), Location(<span class="dig">1655</span>, <span class="dig">245</span>))
+<span class="skw">click</span>(Location(<span class="dig">1779</span>, <span class="dig">735</span>))
+<span class="skw">click</span>(Location(<span class="dig">1699</span>, <span class="dig">38</span>))
+
+<span class="kw">while</span> running:
+    <span class="kw">if</span> myExists(Region(<span class="dig">1305</span>,<span class="dig">996</span>,<span class="dig">78</span>,<span class="dig">75</span>), <span class="dig">0.8</span>, <img src="1596929699276.png" />):
+        <span class="skw">click</span>(Location(<span class="dig">1789</span>, <span class="dig">118</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1109</span>, <span class="dig">714</span>))
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="skw">click</span>(Location(<span class="dig">1613</span>, <span class="dig">117</span>))
+        <span class="skw">wait</span>(<img src="1596933099517.png" />,<span class="dig">10</span>)
+        <span class="cmt">#click pot</span>
+        <span class="skw">click</span>(Location(<span class="dig">425</span>, <span class="dig">782</span>))
+        <span class="cmt">#click +100 x5</span>
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+
+        <span class="skw">click</span>(Location(<span class="dig">1079</span>, <span class="dig">813</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1701</span>, <span class="dig">40</span>))
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+
+        <span class="cmt">#go back to farm</span>
+        <span class="skw">click</span>(Location(<span class="dig">173</span>, <span class="dig">227</span>))
+        <span class="skw">click</span>(Location(<span class="dig">535</span>, <span class="dig">122</span>))
+        <span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">245</span>), Location(<span class="dig">1655</span>, <span class="dig">980</span>))
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="kw">if</span> zoneresult == <span class="str">'Ruinous Branch Road'</span>:
+            <span class="skw">click</span>(<img src="1596932150617.png" />)
+            <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+            <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+            <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Crater'</span>:
+            <span class="skw">click</span>(<img src="1596932300046.png" />)
+            <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+            <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+            <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Ancient Rubble'</span>:
+            <span class="skw">click</span>(<img src="1596932327063.png" />)
+            <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+            <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+            <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="skw">click</span>(Location(<span class="dig">173</span>, <span class="dig">227</span>))
+        <span class="skw">click</span>(Location(<span class="dig">535</span>, <span class="dig">122</span>))
+        <span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">980</span>), Location(<span class="dig">1655</span>, <span class="dig">245</span>))
+        <span class="kw">if</span> zoneresult == <span class="str">'Ruinous Branch Road'</span>:
+            <span class="skw">click</span>(<img src="1596928784758.png" />)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Crater'</span>:
+            <span class="skw">click</span>(<img src="1596928756349.png" />)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Ancient Rubble'</span>:
+            <span class="skw">click</span>(<img src="1596928815049.png" />)
+        <span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">980</span>), Location(<span class="dig">1655</span>, <span class="dig">245</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1779</span>, <span class="dig">735</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1699</span>, <span class="dig">38</span>))
+    <span class="kw">if</span> myExists(Region(<span class="dig">1226</span>,<span class="dig">996</span>,<span class="dig">78</span>,<span class="dig">77</span>), <span class="dig">0.8</span>, <img src="1596929992187.png" />):
+        <span class="skw">click</span>(Location(<span class="dig">1789</span>, <span class="dig">118</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1109</span>, <span class="dig">714</span>))
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="skw">click</span>(Location(<span class="dig">1613</span>, <span class="dig">117</span>))
+        <span class="skw">wait</span>(<img src="1596933099517.png" />,<span class="dig">10</span>)
+        <span class="cmt">#click pot</span>
+        <span class="skw">click</span>(Location(<span class="dig">427</span>, <span class="dig">556</span>))
+        <span class="cmt">#click +100 x5</span>
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1090</span>, <span class="dig">557</span>))
+
+        <span class="skw">click</span>(Location(<span class="dig">1079</span>, <span class="dig">813</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1701</span>, <span class="dig">40</span>))
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+
+        <span class="cmt">#go back to farm</span>
+        <span class="skw">click</span>(Location(<span class="dig">173</span>, <span class="dig">227</span>))
+        <span class="skw">click</span>(Location(<span class="dig">535</span>, <span class="dig">122</span>))
+        <span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">245</span>), Location(<span class="dig">1655</span>, <span class="dig">980</span>))
+        <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="kw">if</span> zoneresult == <span class="str">'Ruinous Branch Road'</span>:
+            <span class="skw">click</span>(<img src="1596932150617.png" />)
+            <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+            <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+            <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Crater'</span>:
+            <span class="skw">click</span>(<img src="1596932300046.png" />)
+            <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+            <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+            <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Ancient Rubble'</span>:
+            <span class="skw">click</span>(<img src="1596932327063.png" />)
+            <span class="skw">click</span>(Location(<span class="dig">1812</span>, <span class="dig">111</span>))
+            <span class="skw">click</span>(Location(<span class="dig">1110</span>, <span class="dig">716</span>))
+            <span class="skw">sleep</span>(<span class="dig">3</span>)
+        <span class="skw">click</span>(Location(<span class="dig">173</span>, <span class="dig">227</span>))
+        <span class="skw">click</span>(Location(<span class="dig">535</span>, <span class="dig">122</span>))
+        <span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">980</span>), Location(<span class="dig">1655</span>, <span class="dig">245</span>))
+        <span class="kw">if</span> zoneresult == <span class="str">'Ruinous Branch Road'</span>:
+            <span class="skw">click</span>(<img src="1596928784758.png" />)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Crater'</span>:
+            <span class="skw">click</span>(<img src="1596928756349.png" />)
+        <span class="kw">elif</span> zoneresult == <span class="str">'Ruinous Ancient Rubble'</span>:
+            <span class="skw">click</span>(<img src="1596928815049.png" />)
+        <span class="skw">dragDrop</span>(Location(<span class="dig">1655</span>, <span class="dig">980</span>), Location(<span class="dig">1655</span>, <span class="dig">245</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1779</span>, <span class="dig">735</span>))
+        <span class="skw">click</span>(Location(<span class="dig">1699</span>, <span class="dig">38</span>))
+</pre>
+</body>
+</html>
