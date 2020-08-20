@@ -28,6 +28,8 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 
 ### Change Log/Updates
 ---------------------------------
+- **v1.05.6**
+  - There's a bug where the potion icon doesn't display after porting to camp. Fixed by clicking on the menu instead. 
 - **v1.05.5**
   - Added bundle unlock potential after hunting companions to prevent full inventory.  
 - **v1.05.4**
