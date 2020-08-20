@@ -6,11 +6,11 @@
 - Replenish your HP and MP pots when it runs out by x500
 - Detect deaths and remove death fatigue
 - Redispatch gathering and hunting companions and complete conquest companions
-- Bundle unlock potential when bag is full and can't buy pots
+- Bundle unlock potential after hunting companions and when bag is full and can't buy pots 
 - Log all the events
 
 ### Requirements
-- Java Installed ex. [jre-8u261-windows-x64.exe](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=242990_a4634525489241b9a9e1aa73d9e118e6)
+- Java x64 Installed ex. [jre-8u261-windows-x64.exe](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=242990_a4634525489241b9a9e1aa73d9e118e6)
 - 1920x1080 resolution
 - V4 in-game setting UI Ratio of 3 (Default value)
 - Camp Teleport Scrolls
@@ -29,7 +29,7 @@ This scans your screen so can't have other windows blocking your V4 display. Mea
 ### Change Log/Updates
 ---------------------------------
 - **v1.05.6**
-  - There's a bug where the potion icon doesn't display after porting to camp. Fixed by clicking on the menu instead. 
+  - There's a bug where the potion icon doesn't display sometimes after porting to camp. Fixed by clicking on the menu instead. 
 - **v1.05.5**
   - Added bundle unlock potential after hunting companions to prevent full inventory.  
 - **v1.05.4**
